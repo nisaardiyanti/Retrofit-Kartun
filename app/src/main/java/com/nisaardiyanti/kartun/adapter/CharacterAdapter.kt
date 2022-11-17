@@ -12,7 +12,7 @@ import com.nisaardiyanti.kartun.model.RickMorty
 
 class CharacterAdapter : PagingDataAdapter<RickMorty,
         ImageViewHolder>(diffCallback) {
-
+//no dua class adapter
 
     inner class ImageViewHolder(
         val binding: CharacterLayoutBinding
