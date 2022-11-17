@@ -20,8 +20,10 @@ object AppModule {
     @Provides
     @Singleton
     fun provideRetrofitInstance(BASE_URL: String): ApiService =
+    //no lima bagian webservice
         Retrofit.Builder()
             .baseUrl(BASE_URL)
+            //base url untuk yang dibuat dari ApiService
             .addConverterFactory(GsonConverterFactory.create())
             .build()
             .create(ApiService::class.java)
