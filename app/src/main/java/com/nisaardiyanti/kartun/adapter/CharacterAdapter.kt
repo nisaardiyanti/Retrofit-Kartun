@@ -11,14 +11,16 @@ import com.nisaardiyanti.kartun.databinding.CharacterLayoutBinding
 import com.nisaardiyanti.kartun.model.RickMorty
 
 class CharacterAdapter : PagingDataAdapter<RickMorty,
+//kelas adapter
         ImageViewHolder>(diffCallback) {
 //no dua class adapter
 
     inner class ImageViewHolder(
         val binding: CharacterLayoutBinding
+            //validasi binding menggunakan characterlayoutbinding
     ) :
         ViewHolder(binding.root)
-
+//viewholder menggunakan binding.root
     companion object {
         val diffCallback = object : DiffUtil.ItemCallback<RickMorty>() {
             override fun areItemsTheSame(oldItem: RickMorty, newItem: RickMorty): Boolean {
@@ -34,6 +36,7 @@ class CharacterAdapter : PagingDataAdapter<RickMorty,
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ImageViewHolder {
         return ImageViewHolder(
+                //mengembalikan imageviewholder
             CharacterLayoutBinding.inflate(
                 LayoutInflater.from(parent.context),
                 parent, false
@@ -42,6 +45,7 @@ class CharacterAdapter : PagingDataAdapter<RickMorty,
     }
 
     override fun onBindViewHolder(holder: ImageViewHolder, position: Int) {
+          //function on BindingViewHolder  
         val currChar = getItem(position)
 
         holder.binding.apply {
@@ -50,6 +54,7 @@ class CharacterAdapter : PagingDataAdapter<RickMorty,
                 tvDescription.text = "${currChar?.name}"
 
                 val imageLink = currChar?.image
+                    //validasi untuk gambar
                 imageView.load(imageLink) {
                     crossfade(true)
                     crossfade(1000)
