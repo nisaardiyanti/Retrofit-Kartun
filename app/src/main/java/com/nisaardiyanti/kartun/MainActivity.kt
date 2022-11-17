@@ -32,6 +32,7 @@ class MainActivity : AppCompatActivity() {
 
 
     private fun setupRecyclerView() {
+        //nomer dua bagian recycleview
         //function recyclerView digunakan untuk RecyclerView memudahkan untuk
         // menampilkan kumpulan data besar secara efisien.
 
