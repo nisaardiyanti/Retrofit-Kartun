@@ -6,6 +6,7 @@ import com.nisaardiyanti.kartun.api.ApiService
 import com.nisaardiyanti.kartun.model.RickMorty
 
 class RickyMortyPagingSource
+//kelas RickyMortyPagingSource
     (
     private val apiService: ApiService
 ) : PagingSource<Int, RickMorty>() {
@@ -23,11 +24,12 @@ class RickyMortyPagingSource
             val responseData = mutableListOf<RickMorty>()
             val data = response.body()?.results ?: emptyList()
             responseData.addAll(data)
-
+ // no tujuh untuk  respon data
             LoadResult.Page(
                 data = responseData,
                 prevKey = if (currentPage == 1) null else -1,
                 nextKey = currentPage.plus(1)
+                
             )
         } catch (e: Exception) {
             LoadResult.Error(e)
