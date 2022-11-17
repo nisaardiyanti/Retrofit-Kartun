@@ -10,8 +10,12 @@ interface ApiService {
 
     @GET(Constants.END_POINT)
     suspend fun getAllCharacters(
+        //no sembilan menampilkan gambar
        // @Query("menghitung") ukuran:Int,
         @Query("page") page: Int
 
     ): Response<ResponseApi>
+    //response dari ResponseApi
+   
+   
 }
