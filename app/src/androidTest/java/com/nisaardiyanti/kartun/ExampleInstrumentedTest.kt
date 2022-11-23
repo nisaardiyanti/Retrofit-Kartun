@@ -9,16 +9,16 @@ import org.junit.runner.RunWith
 import org.junit.Assert.*
 
 /**
- * Instrumented test, which will execute on an Android device.
+ * Tes berinstrumen, yang akan dijalankan pada perangkat Android.
  *
- * See [testing documentation](http://d.android.com/tools/testing).
+ * Lihat [testing documentation](http://d.android.com/tools/testing).
  */
 @RunWith(AndroidJUnit4::class)
 class ExampleInstrumentedTest {
     @Test
     fun useAppContext() {
-        // Context of the app under test.
+      // Konteks aplikasi yang sedang diuji
         val appContext = InstrumentationRegistry.getInstrumentation().targetContext
-        assertEquals("com.bersyte.paging3", appContext.packageName)
+        assertEquals("com.nisaardiyanti.kartun", appContext.packageName)
     }
 }
