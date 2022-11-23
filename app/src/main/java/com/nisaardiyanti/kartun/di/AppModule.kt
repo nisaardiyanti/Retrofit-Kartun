@@ -22,6 +22,9 @@ object AppModule {
     fun provideRetrofitInstance(BASE_URL: String): ApiService =
     //no enam  bagian webservice
         Retrofit.Builder()
+        //Kelas Retrofit.Builder menggunakan Builder API untuk memungkinkan menentukan titik akhir URL untuk operasi HTTP
+    //dan akhirnya membangun instans Retrofit baru.
+    //memanggil baseUrl () diperlukan sebelum akhirnya memanggil builder.build (). 
             .baseUrl(BASE_URL)
             //base url untuk yang dibuat dari ApiService
             .addConverterFactory(GsonConverterFactory.create())
